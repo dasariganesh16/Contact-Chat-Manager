@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: contactchat-backend
+    environment:
+      MYSQL_URL: jdbc:mysql://host.docker.internal:3306/contactchatdb?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      JWT_SECRET: K9vS2qL7mN1xP3rT5yB8wC4dH6jF0aZ9
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE: http://localhost:8080
+    container_name: contactchat-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
