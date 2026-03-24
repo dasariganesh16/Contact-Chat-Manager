@@ -27,6 +27,10 @@ Purpose: Register and log in users, return JWT tokens.
 - Registration requires name, email, password, and mobile number.
 - Login uses email and password.
 - `userId` is the mobile number everywhere in the UI and APIs.
+- <img width="1288" height="796" alt="image" src="https://github.com/user-attachments/assets/6f2a3cf9-9238-447f-9b42-f710af979498" />
+
+- <img width="1481" height="752" alt="image" src="https://github.com/user-attachments/assets/e78509b5-78d4-4c77-bb47-1f9d2101e1a9" />
+
 
 Endpoints:
 - `POST /api/auth/register`
@@ -36,6 +40,7 @@ Typical responses include:
 - `token`
 - `userId` (mobile number)
 - `name`, `email`, `phone`, `role`
+  
 
 ### 2) User Profile
 
@@ -55,6 +60,9 @@ Features:
 - Search by name
 - Update favorite or blocked status
 - Delete contact
+- <img width="1363" height="882" alt="image" src="https://github.com/user-attachments/assets/9269ad77-b24a-4a63-8c45-fc051ae8279e" />
+
+<img width="995" height="633" alt="image" src="https://github.com/user-attachments/assets/a1b67d93-5f68-4ad8-9f70-067112fca95e" />
 
 Endpoints:
 - `POST /contacts/add`
@@ -84,6 +92,8 @@ Message fields:
 - `receiverId` (mobile number)
 - `content`
 - `status`
+- <img width="1051" height="892" alt="image" src="https://github.com/user-attachments/assets/0e81c757-fc8a-4827-a37b-4067aba82ebb" />
+
 
 ### 5) WebSocket (Scaffold)
 
